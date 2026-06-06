@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webspark</title>
+    <link rel="stylesheet" href="./styles/index.scss" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  </head>
+
+  <body class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">
+          <img src="./images/monbalan-logo.svg" alt="monblanproject logo" />
+        </a>
+        <div class="header__profile">
+          <div class="header__row">
+            <a href="#" class="header__username">monblanproject</a>
+            <a href="#" class="header__btn">Start on 17-02-2016</a>
+          </div>
+          <ul class="header__stats">
+            <li><span>870</span> posts</li>
+            <li><span>11,787</span> followers</li>
+            <li><span>112</span> following</li>
+          </ul>
+          <div class="header__filters">
+            <label class="header__filter-label" for="date-from">Date</label>
+            <div class="header__date-wrapper">
+              <input type="text" id="date-from" name="date_from" class="header__date-input" placeholder="from">
+              <button type="button" class="header__date-clear" aria-label="Clear date from">
+                <img src="./images/cross-icon.svg" alt="Clear" />
+              </button>
+              <button type="button" class="header__date-icon" aria-label="Select date from">
+                <img src="./images/calendar-icon.svg" alt="Calendar" />
+              </button>
+            </div>
+            <div class="header__date-wrapper">
+              <input type="text" id="date-to" name="date_to" class="header__date-input" placeholder="09_08_2016">
+              <button type="button" class="header__date-clear" aria-label="Clear date to">
+                <img src="./images/cross-icon.svg" alt="Clear" />
+              </button>
+              <button type="button" class="header__date-icon" aria-label="Select date to">
+                <img src="./images/calendar-icon.svg" alt="Calendar" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="view-switch">
+          <div class="view-switch__btn view-switch__btn--grid" aria-label="Rows">
+            <div class="icon icon-rows"></div>
+          </div>
+          <div class="view-switch__btn view-switch__btn--list" aria-label="Tiles">
+            <div class="icon icon-tiles"></div>
+          </div>
+        </div>
+        <div class="posts-list">
+          <article class="post-card">
+            <div class="post-card__image">
+              <img src="./images/blog-image.png" alt="Post preview" />
+            </div>
+            <div class="post-card__info">
+              <div class="post-card__metrics">
+                <span class="post-card__label">Today</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    128
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    31
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__metrics">
+                <span class="post-card__label">9-08-2016</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    67
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    22
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__upload">
+                <div class="post-card__upload-label">Image upload</div>
+                <div class="post-card__upload-date">11-04-2016</div>
+              </div>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__image">
+              <img src="./images/blog-image.png" alt="Post preview" />
+            </div>
+            <div class="post-card__info">
+              <div class="post-card__metrics">
+                <span class="post-card__label">Today</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    128
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    31
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__metrics">
+                <span class="post-card__label">9-08-2016</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    67
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    22
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__upload">
+                <div class="post-card__upload-label">Image upload</div>
+                <div class="post-card__upload-date">11-04-2016</div>
+              </div>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__image">
+              <img src="./images/blog-image.png" alt="Post preview" />
+            </div>
+            <div class="post-card__info">
+              <div class="post-card__metrics">
+                <span class="post-card__label">Today</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    128
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    31
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__metrics">
+                <span class="post-card__label">9-08-2016</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    67
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    22
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__upload">
+                <div class="post-card__upload-label">Image upload</div>
+                <div class="post-card__upload-date">11-04-2016</div>
+              </div>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__image">
+              <img src="./images/blog-image.png" alt="Post preview" />
+            </div>
+            <div class="post-card__info">
+              <div class="post-card__metrics">
+                <span class="post-card__label">Today</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    128
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    31
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__metrics">
+                <span class="post-card__label">9-08-2016</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    67
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    22
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__upload">
+                <div class="post-card__upload-label">Image upload</div>
+                <div class="post-card__upload-date">11-04-2016</div>
+              </div>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__image">
+              <img src="./images/blog-image.png" alt="Post preview" />
+            </div>
+            <div class="post-card__info">
+              <div class="post-card__metrics">
+                <span class="post-card__label">Today</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    128
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    31
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__metrics">
+                <span class="post-card__label">9-08-2016</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    67
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    22
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__upload">
+                <div class="post-card__upload-label">Image upload</div>
+                <div class="post-card__upload-date">11-04-2016</div>
+              </div>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__image">
+              <img src="./images/blog-image.png" alt="Post preview" />
+            </div>
+            <div class="post-card__info">
+              <div class="post-card__metrics">
+                <span class="post-card__label">Today</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    128
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    31
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__metrics">
+                <span class="post-card__label">9-08-2016</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    67
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    22
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__upload">
+                <div class="post-card__upload-label">Image upload</div>
+                <div class="post-card__upload-date">11-04-2016</div>
+              </div>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__image">
+              <img src="./images/blog-image.png" alt="Post preview" />
+            </div>
+            <div class="post-card__info">
+              <div class="post-card__metrics">
+                <span class="post-card__label">Today</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    128
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    31
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__metrics">
+                <span class="post-card__label">9-08-2016</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    67
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    22
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__upload">
+                <div class="post-card__upload-label">Image upload</div>
+                <div class="post-card__upload-date">11-04-2016</div>
+              </div>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__image">
+              <img src="./images/blog-image.png" alt="Post preview" />
+            </div>
+            <div class="post-card__info">
+              <div class="post-card__metrics">
+                <span class="post-card__label">Today</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    128
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    31
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__metrics">
+                <span class="post-card__label">9-08-2016</span>
+
+                <div class="post-card__counters">
+                  <span class="post-card__stat">
+                    <i class="icon-heart">
+                      <img src="./images/heart-icon.svg" alt="heart-icon" />
+                    </i>
+                    67
+                  </span>
+                  <span class="post-card__stat">
+                    <i class="icon-comment">
+                      <img src="./images/message-icon.svg" alt="comment-icon" />
+                    </i>
+                    22
+                  </span>
+                </div>
+              </div>
+              <div class="post-card__upload">
+                <div class="post-card__upload-label">Image upload</div>
+                <div class="post-card__upload-date">11-04-2016</div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="main__actions">
+          <a href="#" class="btn-load-more">LOAD MORE</a>
+        </div>
+      </div>
+    </main>
+    <div class="decor-bg decor-bg--left">
+      <img src="./images/blog-bg.svg" alt="background-image" />
+    </div>
+    <div class="decor-bg decor-bg--right">
+      <img src="./images/blog-bg2.svg" alt="background-image" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+
+</html>

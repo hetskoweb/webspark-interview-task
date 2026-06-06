@@ -1,0 +1,308 @@
+.main {
+  padding-top: 18px;
+  padding-bottom: 60px;
+
+  &__actions {
+    margin-top: 36px;
+    text-align: center;
+  }
+}
+
+.view-switch {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: end;
+  margin-bottom: 24px;
+
+  &__btn {
+    cursor: pointer;
+  }
+}
+
+.posts-list {
+  gap: 8px;
+
+  &.rows {
+    display: flex;
+    flex-direction: column;
+
+    .post-card {
+
+      @include on-tablet {
+        padding: 0 80px 0 0;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      &__image {
+
+        img {
+          height: 250px;
+          object-fit: cover;
+
+          @include on-tablet {
+            height: 86px;
+            width: 86px;
+          }
+        }
+      }
+
+      &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        padding: 24px;
+
+        @include on-mobile {
+          align-items: center;
+        }
+
+        @include on-tablet {
+          padding: 0;
+        }
+      }
+
+      &__counters {
+        gap: 16px;
+      }
+
+      &__upload {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      &__upload-date {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include on-phone {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include on-tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .post-card {
+
+      &__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 12px;
+        gap: 16px;
+
+        @include on-tablet {
+          gap: 24px;
+        }
+      }
+
+      &__metrics {
+
+        &:first-child {
+          text-align: start;
+        }
+
+        // Вместо :last-child используем :nth-child(2)
+        &:nth-child(2) {
+          text-align: end;
+        }
+      }
+
+      &__label {
+        font-size: 13px;
+
+        @include on-mobile {
+          font-size: 16px;
+        }
+      }
+
+      &__counters {
+        gap: 8px;
+
+        @include on-tablet {
+          flex-direction: column;
+        }
+      }
+
+      &__stat {
+        font-size: 12px;
+
+        @include on-mobile {
+          font-size: 14px;
+        }
+
+        i {
+          width: 12px;
+          height: 12px;
+
+          img {
+            max-width: 100%;
+          }
+
+          @include on-tablet {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      &__upload {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__upload-label {
+        font-size: 13px;
+
+        @include on-desktop {
+          font-size: 14px;
+        }
+      }
+
+      &__upload-date {
+        font-size: 11px;
+
+        @include on-desktop {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.post-card {
+  background: #fff;
+
+  &__image {
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    font-weight: 500;
+  }
+
+  &__counters {
+    display: flex;
+    align-items: center;
+  }
+
+  &__stat {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+
+    i {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        max-width: initial;
+        display: block;
+      }
+    }
+  }
+
+  &__upload {
+    display: flex;
+  }
+
+  &__upload-label {
+    font-weight: 500;
+  }
+
+  &__upload-date {
+    font-weight: 500;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  background-color: #a9a9a9;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  transition: background-color 0.3s ease;
+}
+
+.icon-rows {
+  -webkit-mask-image: url('../../images/rows-icon.svg');
+  mask-image: url('../../images/rows-icon.svg');
+}
+
+.icon-tiles {
+  -webkit-mask-image: url('../../images/tiles-icon.svg');
+  mask-image: url('../../images/tiles-icon.svg');
+}
+
+.view-switch__btn {
+
+  &:hover,
+  &.active {
+    .icon {
+      background-color: #3D8EDA;
+    }
+  }
+}
+
+.btn-load-more {
+  height: 28px;
+  display: inline-block;
+  color: #929292;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: 1px solid #929292;
+  padding: 8px 26px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #929292;
+    color: #fff;
+  }
+}
+
+.decor-bg {
+  position: absolute;
+  z-index: -1;
+
+  &--left {
+    top: 0;
+  }
+
+  &--right {
+    bottom: 0;
+    right: 0;
+    display: none;
+
+    @include on-desktop {
+      display: block;
+    }
+  }
+}
